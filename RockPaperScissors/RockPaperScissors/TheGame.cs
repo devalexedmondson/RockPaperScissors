@@ -10,11 +10,24 @@ namespace RockPaperScissors
     {
         public void RunGame()
         {
+            WelcomePlayer();
+            if (WelcomePlayer() == "1")
+            {
+                PlayerOneOptions();
+            }
+            else if (WelcomePlayer() == "2")
+            {
+                string playerOneChoice = PlayerOneOptions();
+                string playerTwoChoice = PlayerTwoOptions();
+            }
+            else
+            {
+                WelcomePlayer();
+            }
 
         }
-        public void WelcomePlayer()
+        public string WelcomePlayer()
         {
-            int numberOfPlayers;
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
             Console.WriteLine("How many players are there, '1' or '2'?");
             string userInput = Console.ReadLine();            
@@ -30,29 +43,29 @@ namespace RockPaperScissors
             {
                 WelcomePlayer();
             }
-             //return numberOfPlayers; (maybe return?) 
+             return userInput; 
         }
         public string PlayerOneOptions()
         {
             Console.WriteLine("Player one, please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
-            string userInput = Console.ReadLine(); 
-            if (userInput == "rock")
+            string playerOneChoice = Console.ReadLine(); 
+            if (playerOneChoice == "rock")
             {
                 Console.WriteLine("rock");
             }
-            else if (userInput == "paper")
+            else if (playerOneChoice == "paper")
             {
                 Console.WriteLine("paper");
             }
-            else if (userInput == "scissors")
+            else if (playerOneChoice == "scissors")
             {
                 Console.WriteLine("scissors");
             }
-            else if (userInput == "lizzard")
+            else if (playerOneChoice == "lizzard")
             {
                 Console.WriteLine("lizzard");
             }
-            else if (userInput == "spock")
+            else if (playerOneChoice == "spock")
             {
                 Console.WriteLine("spock");
             }
@@ -60,30 +73,30 @@ namespace RockPaperScissors
             {
                 PlayerOneOptions();
             }
-            return userInput;
+            return playerOneChoice;
         }
 
         public string PlayerTwoOptions()
         {
             Console.WriteLine("Player one, please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
-            string userInput = Console.ReadLine();
-            if (userInput == "rock")
+            string playerTwoChoice = Console.ReadLine();
+            if (playerTwoChoice == "rock")
             {
                 Console.WriteLine("rock");
             }
-            else if (userInput == "paper")
+            else if (playerTwoChoice == "paper")
             {
                 Console.WriteLine("paper");
             }
-            else if (userInput == "scissors")
+            else if (playerTwoChoice == "scissors")
             {
                 Console.WriteLine("scissors");
             }
-            else if (userInput == "lizzard")
+            else if (playerTwoChoice == "lizzard")
             {
                 Console.WriteLine("lizzard");
             }
-            else if (userInput == "spock")
+            else if (playerTwoChoice == "spock")
             {
                 Console.WriteLine("spock");
             }
@@ -91,7 +104,7 @@ namespace RockPaperScissors
             {
                 PlayerTwoOptions();
             }
-            return userInput;
+            return playerTwoChoice;
         }
 
     }
