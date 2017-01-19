@@ -26,7 +26,11 @@ namespace RockPaperScissors
             {
                 WelcomePlayer();
             }
-             return numberOfPlayers;
+             //return numberOfPlayers;
         }
+
+        
     }
 }
+
+//create 2 player functionality and finish by 1/20/17

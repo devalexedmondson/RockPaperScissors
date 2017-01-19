@@ -10,3 +10,4 @@ namespace RockPaperScissors
     {
     }
 }
+//assign each option to a function and then assign the option a number. 
