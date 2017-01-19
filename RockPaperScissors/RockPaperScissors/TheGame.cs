@@ -8,7 +8,11 @@ namespace RockPaperScissors
 {
     public class TheGame
     {
-        public string WelcomePlayer()
+        public void RunGame()
+        {
+
+        }
+        public void WelcomePlayer()
         {
             int numberOfPlayers;
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
@@ -20,16 +24,76 @@ namespace RockPaperScissors
             }
             else if (userInput == "2")
             {
-                //Go to player vs player prompt
+                PlayerOneOptions();
             }
             else
             {
                 WelcomePlayer();
             }
-             //return numberOfPlayers;
+             //return numberOfPlayers; (maybe return?) 
+        }
+        public string PlayerOneOptions()
+        {
+            Console.WriteLine("Player one, please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
+            string userInput = Console.ReadLine(); 
+            if (userInput == "rock")
+            {
+                Console.WriteLine("rock");
+            }
+            else if (userInput == "paper")
+            {
+                Console.WriteLine("paper");
+            }
+            else if (userInput == "scissors")
+            {
+                Console.WriteLine("scissors");
+            }
+            else if (userInput == "lizzard")
+            {
+                Console.WriteLine("lizzard");
+            }
+            else if (userInput == "spock")
+            {
+                Console.WriteLine("spock");
+            }
+            else
+            {
+                PlayerOneOptions();
+            }
+            return userInput;
         }
 
-        
+        public string PlayerTwoOptions()
+        {
+            Console.WriteLine("Player one, please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
+            string userInput = Console.ReadLine();
+            if (userInput == "rock")
+            {
+                Console.WriteLine("rock");
+            }
+            else if (userInput == "paper")
+            {
+                Console.WriteLine("paper");
+            }
+            else if (userInput == "scissors")
+            {
+                Console.WriteLine("scissors");
+            }
+            else if (userInput == "lizzard")
+            {
+                Console.WriteLine("lizzard");
+            }
+            else if (userInput == "spock")
+            {
+                Console.WriteLine("spock");
+            }
+            else
+            {
+                PlayerTwoOptions();
+            }
+            return userInput;
+        }
+
     }
 }
 
