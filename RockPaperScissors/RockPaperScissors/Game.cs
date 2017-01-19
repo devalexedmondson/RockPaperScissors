@@ -16,25 +16,39 @@ namespace RockPaperScissors
             playerOne = new Player();
             playerTwo = new Player();
         }
-    public void RunGame()
-        {
+    //public void RunGame()
+    //    {
             
-            WelcomePlayer();
-            if (WelcomePlayer() == "1")
-            {
-                GetPlayerOption();
-            }
-            else if (WelcomePlayer() == "2")
-            {
-                playerOne.choice = GetPlayerOption();
-                playerTwo.choice = GetPlayerOption();
-            }
-            else
-            {
-                WelcomePlayer();
-            }
+          
+    //        if (WelcomePlayer() == "1")
+    //        {
+    //            GetPlayerOption();
+    //        }
+    //        else if (WelcomePlayer() == "2")
+    //        {
+    //            playerOne.choice = GetPlayerOption();
+    //            playerTwo.choice = GetPlayerOption();
 
-        }
+    //            for (int playerWins = 0; playerWins = 2; playerWins++)
+    //            {
+    //                //if(player one wins == true)
+    //                //{
+    //                //    run method that displays player one wins!
+    //                //}
+    //                //else(player two wins == true)
+    //                //{
+    //                //    run method that displays player two wins!
+    //                //}
+    //            }
+                
+              
+    //        }
+    //        else
+    //        {
+    //            WelcomePlayer();
+    //        }
+
+    //    }
         public string WelcomePlayer()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
@@ -48,19 +62,6 @@ namespace RockPaperScissors
             {
                 GetPlayerOption();
                 GetPlayerOption();
-                
-                //if (player one wins == true)
-                //{
-                //    run method that displays player one wins!
-                //}
-                //else if (player two wins == true)
-                //{
-                //    run method that displays player two wins!
-                //}
-                //else 
-                //{
-                //    do i need an else? if no else needed then change else if to else
-                //}
             }
             else
             {
@@ -70,25 +71,25 @@ namespace RockPaperScissors
         }
         public string GetPlayerOption()
         {
-            Console.WriteLine("Player one, please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
-            string userInput = Console.ReadLine(); 
-            if (userInput == "rock")
+            Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
+            string playerChoice = Console.ReadLine(); 
+            if (playerChoice == "rock")
             {
                 Console.WriteLine("rock");
             }
-            else if (userInput == "paper")
+            else if (playerChoice == "paper")
             {
                 Console.WriteLine("paper");
             }
-            else if (userInput == "scissors")
+            else if (playerChoice == "scissors")
             {
                 Console.WriteLine("scissors");
             }
-            else if (userInput == "lizzard")
+            else if (playerChoice == "lizzard")
             {
                 Console.WriteLine("lizzard");
             }
-            else if (userInput == "spock")
+            else if (playerChoice == "spock")
             {
                 Console.WriteLine("spock");
             }
@@ -96,9 +97,13 @@ namespace RockPaperScissors
             {
                 GetPlayerOption();
             }
-            return userInput;
+            return playerChoice;
         }
-
+        public void PlayerOneWin()
+        {
+            Console.WriteLine("Player one wins!");
+        }
+      
         
 
     }
