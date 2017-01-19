@@ -46,7 +46,6 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reference.cs" />
     <Compile Include="TheGame.cs" />
     <Compile Include="TheRules.cs" />
   </ItemGroup>
