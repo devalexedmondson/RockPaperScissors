@@ -11,7 +11,7 @@ namespace RockPaperScissors
         {
             
         }
-        public void GetPlayerName()
+        public virtual void GetPlayerName()
         {
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();

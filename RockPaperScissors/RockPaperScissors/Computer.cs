@@ -47,4 +47,3 @@ namespace RockPaperScissors
     //    string [] halChoices = new string[5] { "rock", "paper", "scissors", "lizard", "spock"};
 
     //    return halChoices[number];
-

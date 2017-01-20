@@ -15,10 +15,20 @@ namespace RockPaperScissors
         {
             
         }
+        public void RunGame()
+        {
+            //WelcomePlayer();
+           // PickPlayers();
+            playerOne.GetPlayerName();
+            playerTwo.GetPlayerName();
+            playerOne.GetPlayerChoice();
+            playerTwo.GetPlayerChoice();
+
+        }
         public void WelcomePlayer()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
-            Console.WriteLine("The rules of the game:\n Rock crushes Scissors and crushes Lizard\nPaper covers Rock and disproves Spock\nScissors cuts paper and decapitates Lizard\nLizard poisons Spock and eats Paper\nSpock smashes Scissors and vaporizes Rock");
+            Console.WriteLine("The rules of the game:\nRock crushes Scissors and crushes Lizard\n\nPaper covers Rock and disproves Spock\n\nScissors cuts paper and decapitates Lizard\n\nLizard poisons Spock and eats Paper\n\nSpock smashes Scissors and vaporizes Rock");
         }
         public string PickPlayers()
         {
@@ -97,16 +107,6 @@ namespace RockPaperScissors
         public void TrackRound()
         {   
           
-        }
-        public void RunGame()
-        {
-            WelcomePlayer();
-            PickPlayers();
-            playerOne.GetPlayerName();
-            playerTwo.GetPlayerName();
-            playerOne.GetPlayerChoice();
-            playerTwo.GetPlayerChoice();
-
         }
     }
 }
