@@ -10,25 +10,26 @@ namespace RockPaperScissors
     {
         public override void GetPlayerChoice()
         {
-            Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
+            Random choice = new Random();
+            int halChoice = choice.Next(0, 5);
             choice = Console.ReadLine();
-            if (this.choice == "rock")
+            if (this.choice == "1")
             {
                 Console.WriteLine("rock");
             }
-            else if (this.choice == "paper")
+            else if (this.choice == "2")
             {
                 Console.WriteLine("paper");
             }
-            else if (this.choice == "scissors")
+            else if (this.choice == "3")
             {
                 Console.WriteLine("scissors");
             }
-            else if (choice == "lizzard")
+            else if (choice == "4")
             {
                 Console.WriteLine("lizzard");
             }
-            else if (choice == "spock")
+            else if (choice == "5")
             {
                 Console.WriteLine("spock");
             }
@@ -39,3 +40,11 @@ namespace RockPaperScissors
         }
     }
 }
+//alternate way to get random selection
+//public int GetRandomNumber()
+//{
+//    int number = Random.Next (0,6)
+//    string [] halChoices = new string[5] { "rock", "paper", "scissors", "lizard", "spock"};
+
+//    return halChoices[number];
+//}

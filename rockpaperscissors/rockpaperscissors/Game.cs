@@ -26,13 +26,11 @@ namespace RockPaperScissors
             string userInput = Console.ReadLine();
                 if (userInput == "1")
                 {
-                //add to list of player and play against AI
                 playerOne = new Human();
                 playerTwo = new Computer();
                 }
                 else if (userInput == "2")
                 {
-                //add both to list of players
                 playerOne = new Human();
                 playerTwo = new Human();
                 }
