@@ -50,36 +50,36 @@ namespace RockPaperScissors
             return choice;
         }
        
-        public int PlayHAL()
-        {
-            Random choice = new Random();
-            int halChoice = choice.Next(0, 5);
-            if (this.halChoice = 1)
-            {
-                Console.WriteLine("rock");
-            }
-            else if (this.halChoice = 2)
-            {
-                Console.WriteLine("paper");
-            }
-            else if (this.halChoice = 3)
-            {
-                Console.WriteLine("scissors");
-            }
-            else if (this.halChoice = 4)
-            {
-                Console.WriteLine("lizzard");
-            }
-            else if (this.halChoice = 5)
-            {
-                Console.WriteLine("spock");
-            }
-            else
-            {
-                GetPlayer();
-            }
-            return halChoice;
-        }
+        //public int PlayHAL()
+        //{
+        //    Random choice = new Random();
+        //    int halChoice = choice.Next(0, 5);
+        //    if (this.halChoice = 1)
+        //    {
+        //        Console.WriteLine("rock");
+        //    }
+        //    else if (this.halChoice = 2)
+        //    {
+        //        Console.WriteLine("paper");
+        //    }
+        //    else if (this.halChoice = 3)
+        //    {
+        //        Console.WriteLine("scissors");
+        //    }
+        //    else if (this.halChoice = 4)
+        //    {
+        //        Console.WriteLine("lizzard");
+        //    }
+        //    else if (this.halChoice = 5)
+        //    {
+        //        Console.WriteLine("spock");
+        //    }
+        //    else
+        //    {
+        //        GetPlayerChoice();
+        //    }
+        //    return halChoice;
+        //}
         //alternate way to get random selection
         //public int GetRandomNumber()
         //{
@@ -92,4 +92,4 @@ namespace RockPaperScissors
 
     }
 
-}
+//}
