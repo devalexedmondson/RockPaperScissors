@@ -13,11 +13,6 @@ namespace RockPaperScissors
             this.name = name;
             this.choice = choice;
         }
-        public string CreatePlayer()
-        {
-            Console.WriteLine("What is your name?");
-            string name = Console.ReadLine();
-            return new Player(name);
-        }
+      
     }
 }

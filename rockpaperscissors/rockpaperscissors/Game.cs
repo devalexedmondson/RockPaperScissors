@@ -8,33 +8,23 @@ namespace RockPaperScissors
 {
     public class TheGame
     {
-        Player playerOne;
-        Player playerTwo;
+        public Player playerOne;
+        public Player playerTwo;
+        public Computer computer; 
 
         public TheGame()
         {
             playerOne = new Player();
             playerTwo = new Player();
+            computer = new Computer();
         }
-        public string WelcomePlayer()
+        public void WelcomePlayer()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
-            Console.WriteLine("How many players are there, '1' or '2'?");
-            string userInput = Console.ReadLine();            
-            if (userInput == "1")
-            {
-                //Go to player vs AI prompt
-            }
-            else if (userInput == "2")
-            {
-            
-            }
-            else
-            {
-                WelcomePlayer();
-            }
-             return userInput; 
+            Console.WriteLine("The rules of the game:\n Rock crushes Scissors and crushes Lizard\nPaper covers Rock and disproves Spock\nScissors cuts paper and decapitates Lizard\nLizard poisons Spock and eats Paper\nSpock smashes Scissors and vaporizes Rock");
         }
+        //how many players
+
         public void PickAWinner()
         {
             if (playerOne = "rock" && playerTwo = "scissors" || playerTwo = "lizard")

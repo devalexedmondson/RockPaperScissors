@@ -13,35 +13,41 @@ namespace RockPaperScissors
             this.choice = choice;
             this.name = name;
         }
-        public string GetPlayer()
+        public string GetPlayerName()
+        {
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+            return name;
+        }
+        public string GetPlayerChoice()
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
-            string userChoice = Console.ReadLine();
-            if (userChoice == "rock")
+            string choice = Console.ReadLine();
+            if (this.choice == "rock")
             {
                 Console.WriteLine("rock");
             }
-            else if (userChoice == "paper")
+            else if (this.choice == "paper")
             {
                 Console.WriteLine("paper");
             }
-            else if (userChoice == "scissors")
+            else if (this.choice == "scissors")
             {
                 Console.WriteLine("scissors");
             }
-            else if (userChoice == "lizzard")
+            else if (choice == "lizzard")
             {
                 Console.WriteLine("lizzard");
             }
-            else if (userChoice == "spock")
+            else if (choice == "spock")
             {
                 Console.WriteLine("spock");
             }
             else
             {
-                GetPlayer();
+                GetPlayerChoice();
             }
-            return userChoice;
+            return choice;
         }
        
         public int PlayHAL()
