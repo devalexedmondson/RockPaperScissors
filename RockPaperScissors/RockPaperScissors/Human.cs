@@ -36,7 +36,6 @@ namespace RockPaperScissors
             {
                 GetPlayerChoice();
             }
-        }
-      
+        }  
     }
 }

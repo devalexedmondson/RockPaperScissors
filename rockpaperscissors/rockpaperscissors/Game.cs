@@ -100,13 +100,13 @@ namespace RockPaperScissors
         }
         public void RunGame()
         {
+            WelcomePlayer();
+            PickPlayers();
             playerOne.GetPlayerName();
             playerTwo.GetPlayerName();
             playerOne.GetPlayerChoice();
             playerTwo.GetPlayerChoice();
-        }
 
+        }
     }
 }
-
-//create 2 player functionality and finish by 1/20/17

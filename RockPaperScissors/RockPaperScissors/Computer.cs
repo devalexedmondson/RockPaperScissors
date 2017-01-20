@@ -10,8 +10,8 @@ namespace RockPaperScissors
     {
         public override void GetPlayerChoice()
         {
-            Random choice = new Random();
-            int halChoice = choice.Next(0, 5);
+            Random halChoice = new Random();
+            Console.WriteLine(halChoice.Next(1,6));
             choice = Console.ReadLine();
             if (this.choice == "1")
             {
@@ -39,12 +39,12 @@ namespace RockPaperScissors
             }
         }
     }
-}
-//alternate way to get random selection
-//public int GetRandomNumber()
-//{
-//    int number = Random.Next (0,6)
-//    string [] halChoices = new string[5] { "rock", "paper", "scissors", "lizard", "spock"};
+    }
+    //alternate way to get random selection
+    //public int GetRandomNumber()
+    //{
+    //    int number = Random.Next (0,6)
+    //    string [] halChoices = new string[5] { "rock", "paper", "scissors", "lizard", "spock"};
 
-//    return halChoices[number];
-//}
+    //    return halChoices[number];
+
