@@ -4,41 +4,45 @@ namespace RockPaperScissors
 {
     public class Player
     {
-        public string choice;
+        public string userChoice;
         public string name;
 
-
-        public string GetPlayerOption()
+        public Player ()
+        {
+            
+        }
+        public string GetPlayer()
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
-            string userInput = Console.ReadLine();
-            if (userInput == "rock")
+            string userChoice = Console.ReadLine();
+            if (userChoice == "rock")
             {
                 Console.WriteLine("rock");
             }
-            else if (userInput == "paper")
+            else if (userChoice == "paper")
             {
                 Console.WriteLine("paper");
             }
-            else if (userInput == "scissors")
+            else if (userChoice == "scissors")
             {
                 Console.WriteLine("scissors");
             }
-            else if (userInput == "lizzard")
+            else if (userChoice == "lizzard")
             {
                 Console.WriteLine("lizzard");
             }
-            else if (userInput == "spock")
+            else if (userChoice == "spock")
             {
                 Console.WriteLine("spock");
             }
             else
             {
-                GetPlayerOption();
+                GetPlayer();
             }
-            return userInput;
+            return userChoice;
         }
        
+
 
     }
 

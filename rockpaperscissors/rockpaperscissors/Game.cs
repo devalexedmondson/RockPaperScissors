@@ -37,43 +37,43 @@ namespace RockPaperScissors
         }
         public void PickAWinner()
         {
-            if (playerOneChoice = "rock" && playerTwoChoice = "scissors" || playerTwoChoice = "lizard")
+            if (playerOne = "rock" && playerTwo = "scissors" || playerTwo = "lizard")
             {
                 Console.WriteLine("Player One Wins");
             }
-            else if (playerOneChoice = "paper" && playerTwoChoice = "rock" || playerTwoChoice = "spock")
+            else if (playerOne = "paper" && playerTwo = "rock" || playerTwoC = "spock")
             {
                 Console.WriteLine("Player One Wins");
             }
-            else if (playerOneChoice = "scissors" && playerTwoChoice = "paper" || playerTwoChoice = "lizard")
+            else if (playerOne = "scissors" && playerTwo = "paper" || playerTwo = "lizard")
             {
                 Console.WriteLine("Player One Wins");
             }
-            else if (playerOneChoice = "lizard" && playerTwoChoice = "paper" || playerTwoChoice = "spock")
+            else if (playerOne = "lizard" && playerTwo = "paper" || playerTwo = "spock")
             {
                 Console.WriteLine("Player One Wins");
             }
-            else if (playerOneChoice = "spock" && playerTwoChoice = "rock" || playerTwoChoice = "scissors")
+            else if (playerOne = "spock" && playerTwo = "rock" || playerTwo = "scissors")
             {
                 Console.WriteLine("Player One Wins");
             }
-            else if (playerTwoChoice = "rock" && playerOneChoice = "scissors" || playerOneChoice = "lizard")
+            else if (playerTwo = "rock" && playerOne = "scissors" || playerOne = "lizard")
             {
                 Console.WriteLine("Player Two Wins");
             }
-            else if (playerTwoChoice = "paper" && playerOneChoice = "rock" || playerOneChoice = "spock")
+            else if (playerTwo = "paper" && playerOne = "rock" || playerOne = "spock")
             {
                 Console.WriteLine("Player Two Wins");
             }
-            else if (playerTwoChoice = "scissors" && playerOneChoice = "paper" || playerOneChoice = "lizard")
+            else if (playerTwo = "scissors" && playerOne = "paper" || playerOne = "lizard")
             {
                 Console.WriteLine("Player Two Wins");
             }
-            else if (playerTwoChoice = "lizard" && playerOneChoice = "paper" || playerOneChoice = "spock")
+            else if (playerTwo = "lizard" && playerOne = "paper" || playerOne = "spock")
             {
                 Console.WriteLine("Player Two Wins");
             }
-            else if (playerTwoChoice = "spock" && playerOneChoice = "rock" || playerOneChoice = "scissors")
+            else if (playerTwo = "spock" && playerOne = "rock" || playerOne = "scissors")
             {
                 Console.WriteLine("Player Two Wins");
             }
@@ -84,6 +84,9 @@ namespace RockPaperScissors
             }
         }
 
+        //way to use algorithm to get player options
+        List<string> choices = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
+   
         public void TrackWin()
         {
             
