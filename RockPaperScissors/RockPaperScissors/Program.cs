@@ -10,8 +10,8 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
-            TheGame rungame = new TheGame();
-            rungame.WelcomePlayer();
+            Game rungame = new Game();
+            rungame.RunGame();
             Console.ReadKey();
         }
     }

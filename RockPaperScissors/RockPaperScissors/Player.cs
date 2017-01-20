@@ -6,23 +6,20 @@ namespace RockPaperScissors
     {
         public string name;
         public string choice;
-      
 
-        public Player (string choice, string name)
+        public Player ()
         {
-            this.choice = choice;
-            this.name = name;
+            
         }
-        public string GetPlayerName()
+        public void GetPlayerName()
         {
             Console.WriteLine("What is your name?");
-            string name = Console.ReadLine();
-            return name;
+            name = Console.ReadLine();
         }
-        public string GetPlayerChoice()
+        public virtual void GetPlayerChoice()
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
-            string choice = Console.ReadLine();
+            choice = Console.ReadLine();
             if (this.choice == "rock")
             {
                 Console.WriteLine("rock");
@@ -47,7 +44,6 @@ namespace RockPaperScissors
             {
                 GetPlayerChoice();
             }
-            return choice;
         }
        
         //public int PlayHAL()

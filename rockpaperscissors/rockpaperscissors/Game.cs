@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    public class TheGame
+    public class Game
     {
         public Player playerOne;
         public Player playerTwo;
-        //public Computer computer; 
 
-        public TheGame()
+        public Game()
         {
-            playerOne = new Player();
-            playerTwo = new Player();
-            //computer = new Computer();
+            
         }
         public void WelcomePlayer()
         {
@@ -26,15 +23,18 @@ namespace RockPaperScissors
         public string PickPlayers()
         {
             Console.WriteLine("How people will be playing, '1' or '2'?");
-            Console.WriteLine("How many players are there, '1' or '2'?");
             string userInput = Console.ReadLine();
                 if (userInput == "1")
                 {
-                    //Go to player vs AI prompt
+                //add to list of player and play against AI
+                playerOne = new Human();
+                playerTwo = new Computer();
                 }
                 else if (userInput == "2")
                 {
-                    //Go to player vs player prompt
+                //add both to list of players
+                playerOne = new Human();
+                playerTwo = new Human();
                 }
                 else
                 {
@@ -42,6 +42,7 @@ namespace RockPaperScissors
                 }
             return userInput;
         }
+       
 
         public void PickAWinner()
         {
@@ -93,13 +94,19 @@ namespace RockPaperScissors
         } 
         public void TrackWin()
         {
-            
+            Console.WriteLine();
         }
         public void TrackRound()
-        {
+        {   
           
         }
-        
+        public void RunGame()
+        {
+            playerOne.GetPlayerName();
+            playerTwo.GetPlayerName();
+            playerOne.GetPlayerChoice();
+            playerTwo.GetPlayerChoice();
+        }
 
     }
 }
