@@ -4,12 +4,14 @@ namespace RockPaperScissors
 {
     public class Player
     {
-        public string halChoice;
         public string name;
+        public string choice;
+      
 
-        public Player ()
+        public Player (string choice, string name)
         {
-            
+            this.choice = choice;
+            this.name = name;
         }
         public string GetPlayer()
         {
