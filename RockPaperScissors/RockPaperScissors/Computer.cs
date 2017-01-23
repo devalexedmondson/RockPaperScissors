@@ -12,12 +12,10 @@ namespace RockPaperScissors
         {
             name = "HAL";
         }
-        public override void GetPlayerChoice()
+        public override string GetPlayerChoice()
         {
             Random halChoice = new Random();
             int choice = halChoice.Next(1, 6);
-
-            //Console.WriteLine(choice);
 
             switch (choice)
             {
@@ -42,11 +40,5 @@ namespace RockPaperScissors
             }
         }
     }
-    }
-    //alternate way to get random selection
-    //public int GetRandomNumber()
-    //{
-    //    int number = Random.Next (0,6)
-    //    string [] halChoices = new string[5] { "rock", "paper", "scissors", "lizard", "spock"};
-
-    //    return halChoices[number];
+}
+   

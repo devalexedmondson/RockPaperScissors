@@ -16,7 +16,7 @@ namespace RockPaperScissors
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();
         }
-        public virtual void GetPlayerChoice()
+        public virtual string GetPlayerChoice()
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
             choice = Console.ReadLine();
@@ -44,6 +44,7 @@ namespace RockPaperScissors
             {
                 GetPlayerChoice();
             }
+            return choice;
         }
 
         public void TrackWins()

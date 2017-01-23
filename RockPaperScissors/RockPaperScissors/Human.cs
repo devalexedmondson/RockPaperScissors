@@ -13,7 +13,7 @@ namespace RockPaperScissors
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();
         }
-        public override void GetPlayerChoice()
+        public override string GetPlayerChoice()
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
             choice = Console.ReadLine();
@@ -21,7 +21,7 @@ namespace RockPaperScissors
             switch (choice)
             {
                 case "rock":
-                    //Console.WriteLine("rock");
+                    
                     break;
                 case "paper":
                     Console.WriteLine("paper");
@@ -39,31 +39,7 @@ namespace RockPaperScissors
                     Console.WriteLine("That doesnt seem to be an option");
                     break;
             }
-
-            //if (choice == "rock")
-            //{
-            //    Console.WriteLine("rock");
-            //}
-            //else if (choice == "paper")
-            //{
-            //    Console.WriteLine("paper");
-            //}
-            //else if (choice == "scissors")
-            //{
-            //    Console.WriteLine("scissors");
-            //}
-            //else if (choice == "lizzard")
-            //{
-            //    Console.WriteLine("lizzard");
-            //}
-            //else if (choice == "spock")
-            //{
-            //    Console.WriteLine("spock");
-            //}
-            //else
-            //{
-            //    GetPlayerChoice();
-            //}
+            return choice;
         }  
     }
 }

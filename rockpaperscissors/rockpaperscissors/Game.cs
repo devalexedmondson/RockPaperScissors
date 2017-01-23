@@ -19,8 +19,8 @@ namespace RockPaperScissors
         {
             WelcomePlayer();
             PickPlayers();
-            playerOne.GetPlayerChoice();
-            playerTwo.GetPlayerChoice();
+            string playerOneChoice = playerOne.GetPlayerInput();
+            string playerTwoChoice = playerTwo.GetPlayerInput();
             //PickAWinner(playerOneInput,playerTwoInput)
             
 
