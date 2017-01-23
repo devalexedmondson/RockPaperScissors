@@ -25,9 +25,15 @@ namespace RockPaperScissors
             string choiceTwo = playerTwo.GetPlayerChoice();
             string roundwinner = PickAWinner();
             
-
-
         }
+
+        //public void TrackWins()
+        //{
+        //    for (int wins = 0; wins < 3; wins++)
+        //    {
+        //        GetPlayerChoice();
+        //    }
+        //}
         public void WelcomePlayer()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
@@ -54,8 +60,6 @@ namespace RockPaperScissors
                 }
             return userInput;
         }
-       
-
         public string PickAWinner()
         {
             string winner = "";
@@ -100,13 +104,13 @@ namespace RockPaperScissors
             {
                 Console.WriteLine($"{playerTwo.name}, Wins!");
             }
-
             else
             {
                 Console.WriteLine("It's a draw!");
             }
             return winner;
-        } 
+        }
+       
         public void TrackRound()
         {
             for (int rounds = 0; rounds < 3; rounds++)

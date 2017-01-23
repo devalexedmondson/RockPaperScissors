@@ -25,19 +25,19 @@ namespace RockPaperScissors
             switch (choice)
             {
                 case "rock":
-                    Console.WriteLine("Pass to next player");
+                    Console.WriteLine("");
                     break;
                 case "paper":
-                    Console.WriteLine("Pass to next player");
+                    Console.WriteLine("");
                     break;
                 case "scissors":
-                    Console.WriteLine("Pass to next player");
+                    Console.WriteLine("");
                     break;
                 case "lizzard":
-                    Console.WriteLine("Pass to next player");
+                    Console.WriteLine("");
                     break;
                 case "spock":
-                    Console.WriteLine("Pass to next player");
+                    Console.WriteLine("");
                     break;
                 default:
                     Console.WriteLine("That doesnt seem to be an option");

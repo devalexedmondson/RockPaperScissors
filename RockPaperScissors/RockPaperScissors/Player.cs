@@ -43,16 +43,6 @@ namespace RockPaperScissors
                     break;
             }
             return choice;
-        }
-
-        public void TrackWins()
-        {
-            for (int rounds = 0; rounds < 3; rounds++)
-            {
-                GetPlayerChoice();
-            }
-        }
-     
+        }   
     }
-
-    }
+}
