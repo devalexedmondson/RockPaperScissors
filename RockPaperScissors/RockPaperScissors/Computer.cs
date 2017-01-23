@@ -8,37 +8,39 @@ namespace RockPaperScissors
 {
     public class Computer : Player
     {
+        public override void GetPlayerName()
+        {
+            
+            name = "HAL";
+        }
         public override void GetPlayerChoice()
         {
             Random halChoice = new Random();
             int choice = halChoice.Next(1, 6);
 
             Console.WriteLine(choice);
-            Console.ReadLine();
-            //if (this.choice == "1")
-            //{
-            //    Console.WriteLine("rock");
-            //}
-            //else if (this.choice == "2")
-            //{
-            //    Console.WriteLine("paper");
-            //}
-            //else if (this.choice == "3")
-            //{
-            //    Console.WriteLine("scissors");
-            //}
-            //else if (choice == "4")
-            //{
-            //    Console.WriteLine("lizzard");
-            //}
-            //else if (choice == "5")
-            //{
-            //    Console.WriteLine("spock");
-            //}
-            //else
-            //{
-            //    GetPlayerChoice();
-            //}
+
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("rock");
+                    break;
+                case 2:
+                    Console.WriteLine("paper");
+                    break;
+                case 3:
+                    Console.WriteLine("scissors");
+                    break;
+                case 4:
+                    Console.WriteLine("lizzard");
+                    break;
+                case 5:
+                    Console.WriteLine("spock");
+                    break;
+                default:
+                    Console.WriteLine("There seems to be a glitch in my system");
+                    break;
+            }
         }
     }
     }

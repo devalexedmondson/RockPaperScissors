@@ -19,10 +19,9 @@ namespace RockPaperScissors
         {
             WelcomePlayer();
             PickPlayers();
-            playerOne.GetPlayerName();
-            playerTwo.GetPlayerName();
             playerOne.GetPlayerChoice();
             playerTwo.GetPlayerChoice();
+
 
         }
         public void WelcomePlayer()

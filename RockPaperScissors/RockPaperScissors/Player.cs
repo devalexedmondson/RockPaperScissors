@@ -20,15 +20,15 @@ namespace RockPaperScissors
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
             choice = Console.ReadLine();
-            if (this.choice == "rock")
+            if (choice == "rock")
             {
                 Console.WriteLine("rock");
             }
-            else if (this.choice == "paper")
+            else if (choice == "paper")
             {
                 Console.WriteLine("paper");
             }
-            else if (this.choice == "scissors")
+            else if (choice == "scissors")
             {
                 Console.WriteLine("scissors");
             }
@@ -45,7 +45,14 @@ namespace RockPaperScissors
                 GetPlayerChoice();
             }
         }
-       
+
+        public void TrackWins()
+        {
+            for (int rounds = 0; rounds < 3; rounds++)
+            {
+                GetPlayerChoice();
+            }
+        }
      
     }
 
