@@ -22,25 +22,30 @@ namespace RockPaperScissors
             switch (choice)
             {
                 case 1:
+                    this.choice = "rock";
                     Console.WriteLine("HAL chose rock");
                     break;
                 case 2:
+                    this.choice = "paper";
                     Console.WriteLine("HAL chose paper");
                     break;
                 case 3:
+                    this.choice = "scissors";
                     Console.WriteLine("HAL chose scissors");
                     break;
                 case 4:
+                    this.choice = "lizzard";
                     Console.WriteLine("HAL chose lizzard");
                     break;
                 case 5:
+                    this.choice = "spock";
                     Console.WriteLine("HAL chose spock");
                     break;
                 default:
                     Console.WriteLine("There seems to be a glitch in my system");
                     break;
             }
-            return choice.ToString();
+            return null;
         }
     }
 }

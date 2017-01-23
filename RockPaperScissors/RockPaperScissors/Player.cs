@@ -6,6 +6,7 @@ namespace RockPaperScissors
     {
         public string name;
         public string choice;
+        public int wins;
 
         public Player ()
         {
@@ -43,6 +44,17 @@ namespace RockPaperScissors
                     break;
             }
             return choice;
-        }   
+        }
+        //public bool GetWinner(string roundWinner)
+        //{
+        //    if (the round winner == playerOne)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
     }
 }

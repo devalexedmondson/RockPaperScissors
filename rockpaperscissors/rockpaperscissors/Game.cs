@@ -23,17 +23,30 @@ namespace RockPaperScissors
             playerTwo.GetPlayerName();
             string choiceOne = playerOne.GetPlayerChoice();
             string choiceTwo = playerTwo.GetPlayerChoice();
-            string roundwinner = PickAWinner();
+            string roundWinner = PickAWinner();
+            TrackWins(roundWinner);
+            //TrackRound();
             
         }
-
-        //public void TrackWins()
-        //{
-        //    for (int wins = 0; wins < 3; wins++)
-        //    {
-        //        GetPlayerChoice();
-        //    }
-        //}
+        public void GetWinner(string roundWinner)
+        {
+            if (roundWinner == playerOne.choice)
+            {
+                
+            }
+            else
+            {
+                
+            }
+        }
+        public void TrackWins(string roundWinner)
+        {
+            for (int wins = 0; wins == 2; wins++)
+            {
+                Console.WriteLine($"{roundWinner} wins the game!");
+                Console.ReadLine();
+            }
+        }
         public void WelcomePlayer()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
@@ -66,43 +79,43 @@ namespace RockPaperScissors
 
             if (playerOne.choice == "rock" && playerTwo.choice == "scissors" || playerTwo.choice == "lizard")
             {
-                Console.WriteLine($"{playerOne.name}, Wins!");
+                Console.WriteLine($"{playerOne.name} wins the round!");
             }
             else if (playerOne.choice == "paper" && playerTwo.choice == "rock" || playerTwo.choice == "spock")
             {
-                Console.WriteLine($"{playerOne.name}, Wins!");
+                Console.WriteLine($"{playerOne.name} wins the round!");
             }
             else if (playerOne.choice == "scissors" && playerTwo.choice == "paper" || playerTwo.choice == "lizard")
             {
-                Console.WriteLine($"{playerOne.name}, Wins!");
+                Console.WriteLine($"{playerOne.name} wins the round!");
             }
             else if (playerOne.choice == "lizard" && playerTwo.choice == "paper" || playerTwo.choice == "spock")
             {
-                Console.WriteLine($"{playerOne.name}, Wins!");
+                Console.WriteLine($"{playerOne.name} wins the round!");
             }
             else if (playerOne.choice == "spock" && playerTwo.choice == "rock" || playerTwo.choice == "scissors")
             {
-                Console.WriteLine($"{playerOne.name}, Wins!");
+                Console.WriteLine($"{playerOne.name} wins the round!");
             }
             else if (playerTwo.choice == "rock" && playerOne.choice == "scissors" || playerOne.choice == "lizard")
             {
-                Console.WriteLine($"{playerTwo.name}, Wins!");
+                Console.WriteLine($"{playerTwo.name} wins the round!");
             }
             else if (playerTwo.choice == "paper" && playerOne.choice == "rock" || playerOne.choice == "spock")
             {
-                Console.WriteLine($"{playerTwo.name}, Wins!");
+                Console.WriteLine($"{playerTwo.name} wins the round!");
             }
             else if (playerTwo.choice == "scissors" && playerOne.choice == "paper" || playerOne.choice == "lizard")
             {
-                Console.WriteLine($"{playerTwo.name}, Wins!");
+                Console.WriteLine($"{playerTwo.name} wins the round!");
             }
             else if (playerTwo.choice == "lizard" && playerOne.choice == "paper" || playerOne.choice == "spock")
             {
-                Console.WriteLine($"{playerTwo.name}, Wins!");
+                Console.WriteLine($"{playerTwo.name} wins the round!");
             }
             else if (playerTwo.choice == "spock" && playerOne.choice == "rock" || playerOne.choice == "scissors")
             {
-                Console.WriteLine($"{playerTwo.name}, Wins!");
+                Console.WriteLine($"{playerTwo.name} wins the round!");
             }
             else
             {
