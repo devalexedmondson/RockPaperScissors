@@ -20,29 +20,27 @@ namespace RockPaperScissors
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
             choice = Console.ReadLine();
-            if (choice == "rock")
+
+            switch (choice)
             {
-                Console.WriteLine("rock");
-            }
-            else if (choice == "paper")
-            {
-                Console.WriteLine("paper");
-            }
-            else if (choice == "scissors")
-            {
-                Console.WriteLine("scissors");
-            }
-            else if (choice == "lizzard")
-            {
-                Console.WriteLine("lizzard");
-            }
-            else if (choice == "spock")
-            {
-                Console.WriteLine("spock");
-            }
-            else
-            {
-                GetPlayerChoice();
+                case "rock":
+                    Console.WriteLine("Pass to next player");
+                    break;
+                case "paper":
+                    Console.WriteLine("Pass to next player");
+                    break;
+                case "scissors":
+                    Console.WriteLine("Pass to next player");
+                    break;
+                case "lizzard":
+                    Console.WriteLine("Pass to next player");
+                    break;
+                case "spock":
+                    Console.WriteLine("Pass to next player");
+                    break;
+                default:
+                    Console.WriteLine("That doesnt seem to be an option");
+                    break;
             }
             return choice;
         }

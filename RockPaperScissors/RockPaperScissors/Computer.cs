@@ -10,6 +10,8 @@ namespace RockPaperScissors
     {
         public override void GetPlayerName()
         {
+            Console.WriteLine("You are playing against HAL");
+            Console.ReadLine();
             name = "HAL";
         }
         public override string GetPlayerChoice()
@@ -38,6 +40,7 @@ namespace RockPaperScissors
                     Console.WriteLine("There seems to be a glitch in my system");
                     break;
             }
+            return choice.ToString();
         }
     }
 }
