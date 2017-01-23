@@ -62,43 +62,43 @@ namespace RockPaperScissors
 
             if (playerOne.choice == "rock" && playerTwo.choice == "scissors" || playerTwo.choice == "lizard")
             {
-                Console.WriteLine("Player One Wins");
+                Console.WriteLine($"{playerOne.name}, Wins!");
             }
             else if (playerOne.choice == "paper" && playerTwo.choice == "rock" || playerTwo.choice == "spock")
             {
-                Console.WriteLine("Player One Wins");
+                Console.WriteLine($"{playerOne.name}, Wins!");
             }
             else if (playerOne.choice == "scissors" && playerTwo.choice == "paper" || playerTwo.choice == "lizard")
             {
-                Console.WriteLine("Player One Wins");
+                Console.WriteLine($"{playerOne.name}, Wins!");
             }
             else if (playerOne.choice == "lizard" && playerTwo.choice == "paper" || playerTwo.choice == "spock")
             {
-                Console.WriteLine("Player One Wins");
+                Console.WriteLine($"{playerOne.name}, Wins!");
             }
             else if (playerOne.choice == "spock" && playerTwo.choice == "rock" || playerTwo.choice == "scissors")
             {
-                Console.WriteLine("Player One Wins");
+                Console.WriteLine($"{playerOne.name}, Wins!");
             }
             else if (playerTwo.choice == "rock" && playerOne.choice == "scissors" || playerOne.choice == "lizard")
             {
-                Console.WriteLine("Player Two Wins");
+                Console.WriteLine($"{playerTwo.name}, Wins!");
             }
             else if (playerTwo.choice == "paper" && playerOne.choice == "rock" || playerOne.choice == "spock")
             {
-                Console.WriteLine("Player Two Wins");
+                Console.WriteLine($"{playerTwo.name}, Wins!");
             }
             else if (playerTwo.choice == "scissors" && playerOne.choice == "paper" || playerOne.choice == "lizard")
             {
-                Console.WriteLine("Player Two Wins");
+                Console.WriteLine($"{playerTwo.name}, Wins!");
             }
             else if (playerTwo.choice == "lizard" && playerOne.choice == "paper" || playerOne.choice == "spock")
             {
-                Console.WriteLine("Player Two Wins");
+                Console.WriteLine($"{playerTwo.name}, Wins!");
             }
             else if (playerTwo.choice == "spock" && playerOne.choice == "rock" || playerOne.choice == "scissors")
             {
-                Console.WriteLine("Player Two Wins");
+                Console.WriteLine($"{playerTwo.name}, Wins!");
             }
 
             else
