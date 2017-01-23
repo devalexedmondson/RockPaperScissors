@@ -21,6 +21,8 @@ namespace RockPaperScissors
             PickPlayers();
             playerOne.GetPlayerChoice();
             playerTwo.GetPlayerChoice();
+            //PickAWinner(playerOneInput,playerTwoInput)
+            
 
 
         }

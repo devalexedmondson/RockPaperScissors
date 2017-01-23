@@ -13,7 +13,7 @@ namespace RockPaperScissors
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();
         }
-        public void GetPlayerChoice()
+        public override void GetPlayerChoice()
         {
             Console.WriteLine("Please type in your move, 'rock', 'paper', 'scissors', 'lizard', 'spock'.");
             choice = Console.ReadLine();
@@ -21,7 +21,7 @@ namespace RockPaperScissors
             switch (choice)
             {
                 case "rock":
-                    Console.WriteLine("rock");
+                    //Console.WriteLine("rock");
                     break;
                 case "paper":
                     Console.WriteLine("paper");

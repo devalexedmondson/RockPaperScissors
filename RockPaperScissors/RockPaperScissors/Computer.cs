@@ -10,7 +10,6 @@ namespace RockPaperScissors
     {
         public override void GetPlayerName()
         {
-            
             name = "HAL";
         }
         public override void GetPlayerChoice()
@@ -18,24 +17,24 @@ namespace RockPaperScissors
             Random halChoice = new Random();
             int choice = halChoice.Next(1, 6);
 
-            Console.WriteLine(choice);
+            //Console.WriteLine(choice);
 
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine("rock");
+                    Console.WriteLine("HAL chose rock");
                     break;
                 case 2:
-                    Console.WriteLine("paper");
+                    Console.WriteLine("HAL chose paper");
                     break;
                 case 3:
-                    Console.WriteLine("scissors");
+                    Console.WriteLine("HAL chose scissors");
                     break;
                 case 4:
-                    Console.WriteLine("lizzard");
+                    Console.WriteLine("HAL chose lizzard");
                     break;
                 case 5:
-                    Console.WriteLine("spock");
+                    Console.WriteLine("HAL chose spock");
                     break;
                 default:
                     Console.WriteLine("There seems to be a glitch in my system");
