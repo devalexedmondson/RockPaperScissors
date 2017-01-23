@@ -22,8 +22,8 @@ namespace RockPaperScissors
             playerOne.GetPlayerName();
             playerTwo.GetPlayerName();
             string choiceOne = playerOne.GetPlayerChoice();
-            playerTwo.GetPlayerChoice();
-            //PickAWinner(playerOneInput,playerTwoInput)
+            string choiceTwo = playerTwo.GetPlayerChoice();
+            string roundwinner = PickAWinner();
             
 
 
@@ -31,7 +31,7 @@ namespace RockPaperScissors
         public void WelcomePlayer()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
-            Console.WriteLine("The rules of the game:\nRock crushes Scissors and crushes Lizard\n\nPaper covers Rock and disproves Spock\n\nScissors cuts paper and decapitates Lizard\n\nLizard poisons Spock and eats Paper\n\nSpock smashes Scissors and vaporizes Rock");
+            Console.WriteLine("The rules of the game:\nRock crushes Scissors and crushes Lizard\n\nPaper covers Rock and disproves Spock\n\nScissors cuts paper and decapitates Lizard\n\nLizard poisons Spock and eats Paper\n\nSpock smashes Scissors and vaporizes Rock\n");
         }
         public string PickPlayers()
         {
@@ -49,14 +49,17 @@ namespace RockPaperScissors
                 }
                 else
                 {
+                Console.WriteLine("I dont think you understood the question...");
                      PickPlayers();
                 }
             return userInput;
         }
        
 
-        public void PickAWinner()
+        public string PickAWinner()
         {
+            string winner = "";
+
             if (playerOne.choice == "rock" && playerTwo.choice == "scissors" || playerTwo.choice == "lizard")
             {
                 Console.WriteLine("Player One Wins");
@@ -100,8 +103,9 @@ namespace RockPaperScissors
 
             else
             {
-                Console.WriteLine("Not a choice");
+                Console.WriteLine("It's a draw!");
             }
+            return winner;
         } 
         public void TrackRound()
         {
