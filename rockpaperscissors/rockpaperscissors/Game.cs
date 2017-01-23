@@ -24,7 +24,8 @@ namespace RockPaperScissors
             string choiceOne = playerOne.GetPlayerChoice();
             string choiceTwo = playerTwo.GetPlayerChoice();
             string roundWinner = PickAWinner();
-            TrackWins(roundWinner);
+            GetWinner(roundWinner);
+            //TrackWins(roundWinner);
             //TrackRound();
             
         }
@@ -32,11 +33,14 @@ namespace RockPaperScissors
         {
             if (roundWinner == playerOne.choice)
             {
-                
+                playerOne.score++;
+                //add one point to playerOne
+                Console.WriteLine("Add point to p1");
             }
-            else
+            else if (roundWinner == playerTwo.choice)
             {
-                
+                Console.WriteLine("Add point to p2");
+              //add one point to playerTwo
             }
         }
         public void TrackWins(string roundWinner)
@@ -77,44 +81,54 @@ namespace RockPaperScissors
         {
             string winner = "";
 
-            if (playerOne.choice == "rock" && playerTwo.choice == "scissors" || playerTwo.choice == "lizard")
+            if (playerOne.choice == "rock" && (playerTwo.choice == "scissors" || playerTwo.choice == "lizard"))
             {
+                winner = playerOne.choice;
                 Console.WriteLine($"{playerOne.name} wins the round!");
             }
-            else if (playerOne.choice == "paper" && playerTwo.choice == "rock" || playerTwo.choice == "spock")
+            else if (playerOne.choice == "paper" && (playerTwo.choice == "rock" || playerTwo.choice == "spock"))
             {
+                winner = playerOne.choice;
                 Console.WriteLine($"{playerOne.name} wins the round!");
             }
-            else if (playerOne.choice == "scissors" && playerTwo.choice == "paper" || playerTwo.choice == "lizard")
+            else if (playerOne.choice == "scissors" && (playerTwo.choice == "paper" || playerTwo.choice == "lizard"))
             {
+                winner = playerOne.choice;
                 Console.WriteLine($"{playerOne.name} wins the round!");
             }
-            else if (playerOne.choice == "lizard" && playerTwo.choice == "paper" || playerTwo.choice == "spock")
+            else if (playerOne.choice == "lizard" && (playerTwo.choice == "paper" || playerTwo.choice == "spock"))
             {
+                winner = playerOne.choice;
                 Console.WriteLine($"{playerOne.name} wins the round!");
             }
-            else if (playerOne.choice == "spock" && playerTwo.choice == "rock" || playerTwo.choice == "scissors")
+            else if (playerOne.choice == "spock" && (playerTwo.choice == "rock" || playerTwo.choice == "scissors"))
             {
+                winner = playerOne.choice;
                 Console.WriteLine($"{playerOne.name} wins the round!");
             }
-            else if (playerTwo.choice == "rock" && playerOne.choice == "scissors" || playerOne.choice == "lizard")
+            else if (playerTwo.choice == "rock" && (playerOne.choice == "scissors" || playerOne.choice == "lizard"))
             {
+                winner = playerTwo.choice;
                 Console.WriteLine($"{playerTwo.name} wins the round!");
             }
-            else if (playerTwo.choice == "paper" && playerOne.choice == "rock" || playerOne.choice == "spock")
+            else if (playerTwo.choice == "paper" && (playerOne.choice == "rock" || playerOne.choice == "spock"))
             {
+                winner = playerTwo.choice;
                 Console.WriteLine($"{playerTwo.name} wins the round!");
             }
-            else if (playerTwo.choice == "scissors" && playerOne.choice == "paper" || playerOne.choice == "lizard")
+            else if (playerTwo.choice == "scissors" && (playerOne.choice == "paper" || playerOne.choice == "lizard"))
             {
+                winner = playerTwo.choice;
                 Console.WriteLine($"{playerTwo.name} wins the round!");
             }
-            else if (playerTwo.choice == "lizard" && playerOne.choice == "paper" || playerOne.choice == "spock")
+            else if (playerTwo.choice == "lizard" && (playerOne.choice == "paper" || playerOne.choice == "spock"))
             {
+                winner = playerTwo.choice;
                 Console.WriteLine($"{playerTwo.name} wins the round!");
             }
-            else if (playerTwo.choice == "spock" && playerOne.choice == "rock" || playerOne.choice == "scissors")
+            else if (playerTwo.choice == "spock" && (playerOne.choice == "rock" || playerOne.choice == "scissors"))
             {
+                winner = playerTwo.choice;
                 Console.WriteLine($"{playerTwo.name} wins the round!");
             }
             else
@@ -124,12 +138,12 @@ namespace RockPaperScissors
             return winner;
         }
        
-        public void TrackRound()
-        {
-            for (int rounds = 0; rounds < 3; rounds++)
-            {
-                playerOne.GetPlayerChoice();
-            }
-        }
+        //public void TrackRound()
+        //{
+        //    for (int rounds = 0; rounds < 3; rounds++)
+        //    {
+        //        playerOne.GetPlayerChoice();
+        //    }
+        //}
     }
 }
