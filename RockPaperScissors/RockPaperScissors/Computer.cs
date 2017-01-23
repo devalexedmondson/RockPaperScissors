@@ -11,32 +11,34 @@ namespace RockPaperScissors
         public override void GetPlayerChoice()
         {
             Random halChoice = new Random();
-            Console.WriteLine(halChoice.Next(1,6));
-            choice = Console.ReadLine();
-            if (this.choice == "1")
-            {
-                Console.WriteLine("rock");
-            }
-            else if (this.choice == "2")
-            {
-                Console.WriteLine("paper");
-            }
-            else if (this.choice == "3")
-            {
-                Console.WriteLine("scissors");
-            }
-            else if (choice == "4")
-            {
-                Console.WriteLine("lizzard");
-            }
-            else if (choice == "5")
-            {
-                Console.WriteLine("spock");
-            }
-            else
-            {
-                GetPlayerChoice();
-            }
+            int choice = halChoice.Next(1, 6);
+
+            Console.WriteLine(choice);
+            Console.ReadLine();
+            //if (this.choice == "1")
+            //{
+            //    Console.WriteLine("rock");
+            //}
+            //else if (this.choice == "2")
+            //{
+            //    Console.WriteLine("paper");
+            //}
+            //else if (this.choice == "3")
+            //{
+            //    Console.WriteLine("scissors");
+            //}
+            //else if (choice == "4")
+            //{
+            //    Console.WriteLine("lizzard");
+            //}
+            //else if (choice == "5")
+            //{
+            //    Console.WriteLine("spock");
+            //}
+            //else
+            //{
+            //    GetPlayerChoice();
+            //}
         }
     }
     }

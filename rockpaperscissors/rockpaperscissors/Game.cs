@@ -17,8 +17,8 @@ namespace RockPaperScissors
         }
         public void RunGame()
         {
-            //WelcomePlayer();
-           // PickPlayers();
+            WelcomePlayer();
+            PickPlayers();
             playerOne.GetPlayerName();
             playerTwo.GetPlayerName();
             playerOne.GetPlayerChoice();
@@ -32,7 +32,7 @@ namespace RockPaperScissors
         }
         public string PickPlayers()
         {
-            Console.WriteLine("How people will be playing, '1' or '2'?");
+            Console.WriteLine("How many people will be playing, '1' or '2'?");
             string userInput = Console.ReadLine();
                 if (userInput == "1")
                 {
@@ -100,13 +100,12 @@ namespace RockPaperScissors
                 Console.WriteLine("Not a choice");
             }
         } 
-        public void TrackWin()
-        {
-            Console.WriteLine();
-        }
         public void TrackRound()
-        {   
-          
+        {
+            for (int rounds = 0; rounds < 3; rounds++)
+            {
+                playerOne.GetPlayerChoice();
+            }
         }
     }
 }
