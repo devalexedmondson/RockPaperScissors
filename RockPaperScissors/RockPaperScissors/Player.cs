@@ -6,6 +6,7 @@ namespace RockPaperScissors
     {
         public string name;
         public string choice;
+        public int score; 
 
         public Player ()
         {

@@ -25,31 +25,12 @@ namespace RockPaperScissors
             string choiceTwo = playerTwo.GetPlayerChoice();
             string roundWinner = PickAWinner();
             GetWinner(roundWinner);
-            //TrackWins(roundWinner);
-            //TrackRound();
-            
+            TrackWins(roundWinner);
+            RestartRound(); 
         }
-        public void GetWinner(string roundWinner)
+        public void RestartRound()
         {
-            if (roundWinner == playerOne.choice)
-            {
-                playerOne.score++;
-                //add one point to playerOne
-                Console.WriteLine("Add point to p1");
-            }
-            else if (roundWinner == playerTwo.choice)
-            {
-                Console.WriteLine("Add point to p2");
-              //add one point to playerTwo
-            }
-        }
-        public void TrackWins(string roundWinner)
-        {
-            for (int wins = 0; wins == 2; wins++)
-            {
-                Console.WriteLine($"{roundWinner} wins the game!");
-                Console.ReadLine();
-            }
+            //if()
         }
         public void WelcomePlayer()
         {
@@ -137,13 +118,27 @@ namespace RockPaperScissors
             }
             return winner;
         }
-       
-        //public void TrackRound()
-        //{
-        //    for (int rounds = 0; rounds < 3; rounds++)
-        //    {
-        //        playerOne.GetPlayerChoice();
-        //    }
-        //}
+        public void GetWinner(string roundWinner)
+        {
+            if (roundWinner == playerOne.choice)
+            {
+                playerOne.score++;
+                Console.WriteLine("Add point to p1");
+            }
+            else if (roundWinner == playerTwo.choice)
+            {
+                playerTwo.score++;
+                Console.WriteLine("Add point to p2");
+            }
+        }
+        public void TrackWins(string roundWinner)
+        {
+            for (int score = 0; score == 2; score++)
+            {
+                Console.WriteLine($"{roundWinner} wins the game!");
+                Console.ReadLine();
+            }
+        }
+      //put restart method here
     }
 }
