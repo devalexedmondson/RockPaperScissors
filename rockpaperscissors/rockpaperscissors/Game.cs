@@ -25,12 +25,17 @@ namespace RockPaperScissors
             string choiceTwo = playerTwo.GetPlayerChoice();
             string roundWinner = PickAWinner();
             GetWinner(roundWinner);
+            DisplayScore();
             TrackWins();
-            RestartRound(); 
         }
         public void RestartRound()
         {
-           
+            string choiceOne = playerOne.GetPlayerChoice();
+            string choiceTwo = playerTwo.GetPlayerChoice();
+            string roundWinner = PickAWinner();
+            GetWinner(roundWinner);
+            DisplayScore();
+            TrackWins();
         }
         public void WelcomePlayer()
         {
@@ -129,6 +134,11 @@ namespace RockPaperScissors
                playerTwo.score++;
             }
         }
+        public void DisplayScore()
+        {
+            Console.WriteLine($"{playerOne.name} \nScore:{playerOne.score}");
+            Console.WriteLine($"{playerTwo.name} \nScore:{playerTwo.score}");
+        }
         public void TrackWins()
         {
             if (playerOne.score == 2)
@@ -141,7 +151,7 @@ namespace RockPaperScissors
             }
             else
             {
-                playerOne.GetPlayerChoice();
+                RestartRound();
             }
         }
     }
