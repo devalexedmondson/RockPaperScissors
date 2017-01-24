@@ -34,7 +34,7 @@ namespace RockPaperScissors
                     Console.WriteLine("HAL chose scissors");
                     break;
                 case 4:
-                    this.choice = "lizzard";
+                    this.choice = "lizard";
                     Console.WriteLine("HAL chose lizzard");
                     break;
                 case 5:

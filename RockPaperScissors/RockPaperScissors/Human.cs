@@ -33,7 +33,7 @@ namespace RockPaperScissors
                 case "scissors":
                     Console.WriteLine("");
                     break;
-                case "lizzard":
+                case "lizard":
                     Console.WriteLine("");
                     break;
                 case "spock":

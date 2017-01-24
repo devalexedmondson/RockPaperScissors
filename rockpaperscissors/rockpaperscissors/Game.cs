@@ -21,28 +21,32 @@ namespace RockPaperScissors
             PickPlayers();
             playerOne.GetPlayerName();
             playerTwo.GetPlayerName();
+            Console.Clear();
             string choiceOne = playerOne.GetPlayerChoice();
             string choiceTwo = playerTwo.GetPlayerChoice();
+            Console.Clear();
             string roundWinner = PickAWinner();
             GetWinner(roundWinner);
             DisplayScore();
             TrackWins();
         }
-        public void RestartRound()
-        {
+        private void RestartRound()
+        {         
             string choiceOne = playerOne.GetPlayerChoice();
             string choiceTwo = playerTwo.GetPlayerChoice();
+            Console.Clear();
             string roundWinner = PickAWinner();
             GetWinner(roundWinner);
             DisplayScore();
             TrackWins();
+            RestartGame();
         }
-        public void WelcomePlayer()
+        private void WelcomePlayer()
         {
             Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
             Console.WriteLine("The rules of the game:\nRock crushes Scissors and crushes Lizard\n\nPaper covers Rock and disproves Spock\n\nScissors cuts paper and decapitates Lizard\n\nLizard poisons Spock and eats Paper\n\nSpock smashes Scissors and vaporizes Rock\n");
         }
-        public string PickPlayers()
+        private string PickPlayers()
         {
             Console.WriteLine("How many people will be playing, '1' or '2'?");
             string userInput = Console.ReadLine();
@@ -63,7 +67,7 @@ namespace RockPaperScissors
                 }
             return userInput;
         }
-        public string PickAWinner()
+        private string PickAWinner()
         {
             string winner = "";
 
@@ -123,7 +127,7 @@ namespace RockPaperScissors
             }
             return winner;
         }
-        public void GetWinner(string roundWinner)
+        private void GetWinner(string roundWinner)
         {
             if (roundWinner == playerOne.choice)
             {
@@ -134,13 +138,13 @@ namespace RockPaperScissors
                playerTwo.score++;
             }
         }
-        public void DisplayScore()
+        private void DisplayScore()
         {
-            Console.WriteLine($"{playerOne.name} \nScore:{playerOne.score}");
-            Console.WriteLine($"{playerTwo.name} \nScore:{playerTwo.score}");
+            Console.WriteLine($"{playerOne.name} \nScore:{playerOne.score}\n");
+            Console.WriteLine($"{playerTwo.name} \nScore:{playerTwo.score}\n");
         }
-        public void TrackWins()
-        {
+        private void TrackWins()
+        {           
             if (playerOne.score == 2)
             {
                 Console.WriteLine($"{playerOne.name} wins the game!");
@@ -154,11 +158,24 @@ namespace RockPaperScissors
                 RestartRound();
             }
         }
+        private string RestartGame()
+        {
+            Console.WriteLine("Would you like to restart the game, 'yes' or 'no'");
+            string userInput = Console.ReadLine();
+            if (userInput == "yes")
+            {
+                RunGame();
+            }
+            else if (userInput == "no")
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("I dont think you understood the question...");
+                RestartGame();
+            }
+            return userInput;
+       }
     }
 }
-
-//for(int score = 0; score == 2; score++)
-//            {
-//                Console.WriteLine($"{roundWinner} wins the game!");
-//                Console.ReadLine();
-//            }
