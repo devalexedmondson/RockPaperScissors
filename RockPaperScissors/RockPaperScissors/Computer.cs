@@ -24,22 +24,27 @@ namespace RockPaperScissors
                 case 1:
                     this.choice = "rock";
                     Console.WriteLine("HAL chose rock");
+                    Console.ReadLine();
                     break;
                 case 2:
                     this.choice = "paper";
                     Console.WriteLine("HAL chose paper");
+                    Console.ReadLine();
                     break;
                 case 3:
                     this.choice = "scissors";
                     Console.WriteLine("HAL chose scissors");
+                    Console.ReadLine();
                     break;
                 case 4:
                     this.choice = "lizard";
                     Console.WriteLine("HAL chose lizzard");
+                    Console.ReadLine();
                     break;
                 case 5:
                     this.choice = "spock";
                     Console.WriteLine("HAL chose spock");
+                    Console.ReadLine();
                     break;
                 default:
                     Console.WriteLine("There seems to be a glitch in my system");
