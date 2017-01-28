@@ -17,6 +17,7 @@ namespace RockPaperScissors
         }
         public void RunGame()
         {
+            for (int i = 0; )
             WelcomePlayer();
             PickPlayers();
             playerOne.GetPlayerName();
@@ -158,24 +159,24 @@ namespace RockPaperScissors
                 RestartRound();
             }
         }
-        private string RestartGame()
-        {
-            Console.WriteLine("Would you like to restart the game, 'yes' or 'no'");
-            string userInput = Console.ReadLine();
-            if (userInput == "yes")
-            {
-                RunGame();
-            }
-            else if (userInput == "no")
-            {
-                Environment.Exit(0);
-            }
-            else
-            {
-                Console.WriteLine("I dont think you understood the question...");
-                RestartGame();
-            }
-            return userInput;
-       }
+       // private string RestartGame()
+       // {
+       //     Console.WriteLine("Would you like to restart the game, 'yes' or 'no'");
+       //     string userInput = Console.ReadLine();
+       //     if (userInput == "yes")
+       //     {
+       //         RunGame();
+       //     }
+       //     else if (userInput == "no")
+       //     {
+       //         Environment.Exit(0);
+       //     }
+       //     else
+       //     {
+       //         Console.WriteLine("I dont think you understood the question...");
+       //         RestartGame();
+       //     }
+       //     return userInput;
+       //}
     }
 }
