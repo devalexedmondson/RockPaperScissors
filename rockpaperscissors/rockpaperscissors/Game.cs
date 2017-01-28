@@ -22,8 +22,8 @@ namespace RockPaperScissors
             playerOne.GetPlayerName();
             playerTwo.GetPlayerName();
             Console.Clear();
-            string choiceOne = playerOne.GetPlayerChoice();
-            string choiceTwo = playerTwo.GetPlayerChoice();
+            playerOne.GetPlayerChoice();
+            playerTwo.GetPlayerChoice();
             Console.Clear();
             string roundWinner = PickAWinner();
             GetWinner(roundWinner);
@@ -32,8 +32,8 @@ namespace RockPaperScissors
         }
         private void RestartRound()
         {         
-            string choiceOne = playerOne.GetPlayerChoice();
-            string choiceTwo = playerTwo.GetPlayerChoice();
+            playerOne.GetPlayerChoice();
+            playerTwo.GetPlayerChoice();
             Console.Clear();
             string roundWinner = PickAWinner();
             GetWinner(roundWinner);
